@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textViewTargetSheetBottomModalHash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Target Access Point"
+        android:textSize="18sp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewAccessPointNameSheetBottomModalHash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="WIFI_NAME12345"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTargetSheetBottomModalHash" />
+
+    <TextView
+        android:id="@+id/textViewBssidSheetBottomModalHash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="12:34:56:78:90:AA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAccessPointNameSheetBottomModalHash" />
+
+    <TextView
+        android:id="@+id/textViewClientMacAddressSheetBottomModalHash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Client Mac Address"
+        android:textSize="18sp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBssidSheetBottomModalHash" />
+
+    <TextView
+        android:id="@+id/textViewClientMacAddressValueSheetBottomModalHash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="12:34:56:78:90:AA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewClientMacAddressSheetBottomModalHash" />
+
+    <TextView
+        android:id="@+id/textViewKeyInformationSheetBottomModalHash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Key Information"
+        android:textSize="18sp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewClientMacAddressValueSheetBottomModalHash" />
+
+    <TextView
+        android:id="@+id/textViewKeyTypeSheetBottomModalHash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Key type: PMKID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewKeyInformationSheetBottomModalHash" />
+
+    <TextView
+        android:id="@+id/textViewHashDataSheetBottomModalHash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hash: 1234567890"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewKeyTypeSheetBottomModalHash" />
+
+    <TextView
+        android:id="@+id/textViewAnonceSheetBottomModalHash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Anonce: ABCDEF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHashDataSheetBottomModalHash" />
+
+    <TextView
+        android:id="@+id/textViewKeyDataSheetBottomModalHash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Key Data: ABCDEF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAnonceSheetBottomModalHash" />
+
+    <TextView
+        android:id="@+id/textViewLocationSheetBottomModalHash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Location"
+        android:textSize="18sp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewKeyDataSheetBottomModalHash" />
+
+    <TextView
+        android:id="@+id/textViewLatitudeSheetBottomModalHash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Latitude: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLocationSheetBottomModalHash" />
+
+    <TextView
+        android:id="@+id/textViewLongitudeSheetBottomModalHash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Longitude: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLatitudeSheetBottomModalHash" />
+
+    <TextView
+        android:id="@+id/textViewAddressSheetBottomModalHash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Address: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLongitudeSheetBottomModalHash" />
+
+    <TextView
+        android:id="@+id/textViewMetaDataSheetBottomModalHash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Metadata"
+        android:textSize="18sp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewAddressSheetBottomModalHash" />
+
+    <TextView
+        android:id="@+id/textViewDateCapturedSheetBottomModalHash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Date captured: 11:34:23 2023-11-03"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMetaDataSheetBottomModalHash" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

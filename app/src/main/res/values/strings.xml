@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Awps</string>
+
+    <string name="pmkid_based_attack">PMKID Based Attack</string>
+    <string name="mic_based_attack">MIC Based Attack</string>
+    <string name="deauther">Deauther</string>
+
+    <string name="find_targets">Find Targets</string>
+    <string name="change_attack_type">Change Attack Type</string>
+    <string name="clear_attack_logs">Clear Attack Logs</string>
+    <string name="restart_launcher">Restart Launcher</string>
+    <string name="database">Database</string>
+    <string name="more_info">More Info</string>
+    <string name="settings">Settings</string>
+
+</resources>

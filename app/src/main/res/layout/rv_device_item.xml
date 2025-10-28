@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:id="@+id/materialCardViewDeviceItem">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imageViewUsbDeviceItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/ic_icn_usb_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="Usb device icon" />
+
+        <TextView
+            android:id="@+id/textViewDeviceNameDeviceItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Device Name"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewDeviceNameValueDeviceItem"
+            app:layout_constraintStart_toStartOf="@+id/textViewDeviceNameValueDeviceItem" />
+
+        <TextView
+            android:id="@+id/textViewDeviceNameValueDeviceItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/roboto"
+            android:text="CP21XX"
+            app:layout_constraintBottom_toTopOf="@+id/textViewManufacturerDeviceItem"
+            app:layout_constraintStart_toStartOf="@+id/textViewManufacturerDeviceItem" />
+
+        <TextView
+            android:id="@+id/textViewManufacturerDeviceItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Manufacturer"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/imageViewUsbDeviceItem"
+            app:layout_constraintTop_toTopOf="@+id/imageViewUsbDeviceItem" />
+
+        <TextView
+            android:id="@+id/textViewManufacturerValueDeviceItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/textViewManufacturerDeviceItem"
+            app:layout_constraintTop_toBottomOf="@+id/textViewManufacturerDeviceItem"
+            android:text="Silicon Labs"
+            android:fontFamily="@font/roboto"/>
+
+        <TextView
+            android:id="@+id/textViewVendorIdDeviceItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Vendor ID"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewDeviceNameDeviceItem"
+            app:layout_constraintTop_toTopOf="@+id/textViewDeviceNameDeviceItem" />
+
+        <TextView
+            android:id="@+id/textViewDeviceVendorIdDeviceItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10C4"
+            android:fontFamily="@font/roboto"
+            app:layout_constraintStart_toStartOf="@+id/textViewVendorIdDeviceItem"
+            app:layout_constraintTop_toBottomOf="@+id/textViewVendorIdDeviceItem" />
+
+        <TextView
+            android:id="@+id/textViewProductIdDeviceItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Product ID"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewManufacturerDeviceItem"
+            app:layout_constraintTop_toTopOf="@+id/textViewManufacturerDeviceItem" />
+
+        <TextView
+            android:id="@+id/textViewDeviceProductIdValueDeviceItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="EA60"
+            app:layout_constraintStart_toStartOf="@+id/textViewProductIdDeviceItem"
+            app:layout_constraintTop_toBottomOf="@+id/textViewProductIdDeviceItem" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

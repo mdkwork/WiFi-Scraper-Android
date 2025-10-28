@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.autoarmafragment.AutoArmaFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayoutAutoArma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolBarAutoArma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ToolBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_btn_arrow_back_24"
+            app:menu="@menu/auto_arma_top_right_dialog_menu"
+            app:title="Automatic Attack" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/textViewAttackConfigAutoArma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Attack Config"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayoutAutoArma" />
+
+    <TextView
+        android:id="@+id/textViewAttackConfigValueAutoArma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Config: PMKID Based Attack"
+        android:background="@drawable/bg_smooth_corner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAttackConfigAutoArma" />
+
+    <TextView
+        android:id="@+id/textViewCurrentTargetAutoArma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Current Target"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAttackConfigValueAutoArma" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutCurrentTargetAutoArma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bg_smooth_corner"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCurrentTargetAutoArma">
+
+        <TextView
+            android:id="@+id/textViewMacAddressAutoArma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Mac Address: "
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewSsidAutoArma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="SSID: "
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMacAddressAutoArma" />
+
+        <TextView
+            android:id="@+id/textViewMacAddressValueAutoArma"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="None"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewMacAddressAutoArma"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewMacAddressAutoArma"
+            app:layout_constraintTop_toTopOf="@+id/textViewMacAddressAutoArma" />
+
+        <TextView
+            android:id="@+id/textViewSsidValueAutoArma"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="None"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewSsidAutoArma"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewSsidAutoArma"
+            app:layout_constraintTop_toTopOf="@+id/textViewSsidAutoArma" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textViewStatisticsAutoArma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Statistics"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayoutStatisticsAutoArma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutCurrentTargetAutoArma" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutStatisticsAutoArma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bg_smooth_corner"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewStatisticsAutoArma">
+
+        <ImageView
+            android:id="@+id/imageViewNearbyApAutoArma"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_icn_ap_scanned_24"
+            android:theme="@style/ImageIconTheme"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewNearbyApAutoArma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:text="Nearby Access Points"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewNearbyApAutoArma"
+            app:layout_constraintStart_toEndOf="@+id/imageViewNearbyApAutoArma"
+            app:layout_constraintTop_toTopOf="@+id/imageViewNearbyApAutoArma" />
+
+        <ImageView
+            android:id="@+id/imageViewFailedAttacksAutoArma"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_icn_failed_attempts_24"
+            android:theme="@style/ImageIconTheme"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewNearbyApAutoArma" />
+
+        <TextView
+            android:id="@+id/textViewFailedAttacksAutoArma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:text="Failed Attacks"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewFailedAttacksAutoArma"
+            app:layout_constraintStart_toEndOf="@+id/imageViewFailedAttacksAutoArma"
+            app:layout_constraintTop_toTopOf="@+id/imageViewFailedAttacksAutoArma" />
+
+        <ImageView
+            android:id="@+id/imageViewKeysFoundAutoArma"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_icn_pwned_24"
+            android:theme="@style/ImageIconTheme"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewFailedAttacksAutoArma" />
+
+        <TextView
+            android:id="@+id/textViewPwnedAutoArma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Pwned"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewKeysFoundAutoArma"
+            app:layout_constraintStart_toEndOf="@+id/imageViewKeysFoundAutoArma"
+            app:layout_constraintTop_toTopOf="@+id/imageViewKeysFoundAutoArma" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textViewAttackLogAutoArma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Attack Logs"
+        android:textSize="18sp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutStatisticsAutoArma" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAttackLogsAutoArma"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_smooth_corner"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStopStartAutoArma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAttackLogAutoArma" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonStopStartAutoArma"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Start"
+        app:cornerRadius="15dp"
+        app:icon="@drawable/ic_btn_start_24"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

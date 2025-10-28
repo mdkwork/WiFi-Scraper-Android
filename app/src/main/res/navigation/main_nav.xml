@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/devicesFragment">
+
+    <fragment
+        android:id="@+id/devicesFragment"
+        android:name="com.johndeweydev.awps.view.devicesfragment.DevicesFragment"
+        android:label="devices_fragment"
+        tools:layout="@layout/fragment_devices">
+        <action
+            android:id="@+id/action_devicesFragment_to_terminalFragment"
+            app:destination="@id/terminalFragment" />
+        <action
+            android:id="@+id/action_devicesFragment_to_hashesFragment"
+            app:destination="@id/hashesFragment" />
+        <action
+            android:id="@+id/action_devicesFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/terminalFragment"
+        android:name="com.johndeweydev.awps.view.terminalfragment.TerminalFragment"
+        android:label="terminal_fragment"
+        tools:layout="@layout/fragment_terminal">
+        <action
+            android:id="@+id/action_terminalFragment_to_manualArmaFragment"
+            app:destination="@id/manualArmaFragment" />
+        <action
+            android:id="@+id/action_terminalFragment_to_autoArmaFragment"
+            app:destination="@id/autoArmaFragment" />
+        <argument
+            android:name="terminalArgs"
+            app:argType="com.johndeweydev.awps.view.terminalfragment.TerminalArgs" />
+        <action
+            android:id="@+id/action_terminalFragment_to_hashesFragment"
+            app:destination="@id/hashesFragment" />
+        <action
+            android:id="@+id/action_terminalFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/autoArmaFragment"
+        android:name="com.johndeweydev.awps.view.autoarmafragment.AutoArmaFragment"
+        android:label="auto_arma_fragment"
+        tools:layout="@layout/fragment_auto_arma" >
+        <argument
+            android:name="autoArmaArgs"
+            app:argType="com.johndeweydev.awps.view.autoarmafragment.AutoArmaArgs" />
+        <action
+            android:id="@+id/action_autoArmaFragment_to_devicesFragment"
+            app:destination="@id/devicesFragment"
+            app:popUpTo="@id/devicesFragment"
+            app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/action_autoArmaFragment_to_exitModalBottomSheetDialog"
+            app:destination="@id/exitModalBottomSheetDialog" />
+        <action
+            android:id="@+id/action_autoArmaFragment_to_hashesFragment"
+            app:destination="@id/hashesFragment" />
+        <action
+            android:id="@+id/action_autoArmaFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/manualArmaFragment"
+        android:name="com.johndeweydev.awps.view.manualarmafragment.ManualArmaFragment"
+        android:label="manual_arma_fragment"
+        tools:layout="@layout/fragment_manual_arma" >
+        <action
+            android:id="@+id/action_manualArmaFragment_to_devicesFragment"
+            app:destination="@id/devicesFragment" />
+        <argument
+            android:name="manualArmaArgs"
+            app:argType="com.johndeweydev.awps.view.manualarmafragment.ManualArmaArgs" />
+        <action
+            android:id="@+id/action_manualArmaFragment_to_exitModalBottomSheetDialog"
+            app:destination="@id/exitModalBottomSheetDialog" />
+        <action
+            android:id="@+id/action_manualArmaFragment_to_hashesFragment"
+            app:destination="@id/hashesFragment" />
+        <action
+            android:id="@+id/action_manualArmaFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/exitModalBottomSheetDialog"
+        android:name="com.johndeweydev.awps.view.exitmodalbottomsheetdialog.ExitModalBottomSheetDialog"
+        android:label="exit_model_bottom_sheet_dialog"
+        tools:layout="@layout/dialog_sheet_bottom_modal_exit">
+        <action
+            android:id="@+id/action_exitModalBottomSheetDialog_to_terminalFragment"
+            app:destination="@id/terminalFragment"
+            app:popUpTo="@id/terminalFragment"
+            app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/action_exitModalBottomSheetDialog_to_devicesFragment"
+            app:destination="@id/devicesFragment"
+            app:popUpTo="@id/devicesFragment"
+            app:popUpToInclusive="false"/>
+    </dialog>
+    <fragment
+        android:id="@+id/hashesFragment"
+        android:name="com.johndeweydev.awps.view.hashesfragment.HashesFragment"
+        android:label="hashes_fragment"
+        tools:layout="@layout/fragment_hashes" >
+        <action
+            android:id="@+id/action_hashesFragment_to_hashInfoModalBottomSheetDialog"
+            app:destination="@id/hashInfoModalBottomSheetDialog" />
+    </fragment>
+    <dialog
+        android:id="@+id/hashInfoModalBottomSheetDialog"
+        android:name="com.johndeweydev.awps.view.hashinfomodalbottomsheetdialog.HashInfoModalBottomSheetDialog"
+        android:label="hash_info_modal_bottom_sheet_dialog"
+        tools:layout="@layout/dialog_sheet_bottom_modal_hash_info">
+        <argument
+            android:name="hashInfoModalBottomArgs"
+            app:argType="com.johndeweydev.awps.view.hashinfomodalbottomsheetdialog.HashInfoModalBottomArgs" />
+    </dialog>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.johndeweydev.awps.view.settingsfragment.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+
+</navigation>
