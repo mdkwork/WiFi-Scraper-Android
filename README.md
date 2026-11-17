@@ -1,6 +1,6 @@
 # Wi-Fi penetration Android
 
-This android application controls the ESP32 by generating instruction codes, selecting targets, securely storing hashes in a local database, receing GPS coordinates and the transmission of data to the rest api server. The ESP32 receives command from the Android device via serial communication, it executes the attack based on the instruction code sent by Android device. The source code for the ESP32 can be found [here](https://github.com/mdkwork/WiFi-Scraper-Android)
+This android application controls the ESP32 by generating instruction codes, selecting targets, securely storing hashes in a local database, receing GPS coordinates and the transmission of data to the rest api server. The ESP32 receives command from the Android device via serial communication, it executes the attack based on the instruction code sent by Android device. The source code for the ESP32 can be found [here](https://github.com/mdkwork/WiFi-Scraper-ESP32)
 
 ## Features
 
